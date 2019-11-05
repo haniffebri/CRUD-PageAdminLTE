@@ -9,6 +9,8 @@ var session = require('express-session');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var customers = require('./routes/customers');
+var barang = require('./routes/barang');
+var supplier = require('./routes/supplier');
 var expressValidator = require('express-validator');
 var methodOverride = require('method-override');
 
@@ -57,6 +59,8 @@ app.use(
 
 app.use('/', index);
 app.use('/customers', customers);
+app.use('/barang', barang);
+app.use('/supplier', supplier);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
